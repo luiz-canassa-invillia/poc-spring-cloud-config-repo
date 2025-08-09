@@ -8,7 +8,7 @@ spring:
               uri: http://localhost:8181
               predicates:
                 - Path=/poc-gateway/users
-                - Method=POST
+                - Method=GET
               filters:
                 - RewritePath=/poc-gateway/users, /api/users
 
@@ -16,6 +16,6 @@ spring:
               uri: http://localhost:8282
               predicates:
                 - Path=/poc-gateway/products
-                - Method=GET
+                - Method=POST
               filters:
                 - RewritePath=/poc-gateway/products, /api/products
