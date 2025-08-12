@@ -5,6 +5,7 @@ spring:
             - id: user-api-get-all-users
               uri: http://localhost:8181
               predicates:
+                - Header=X-Token, (.*)
                 - Path=/poc-gateway/users
                 - Method=GET
               filters:
