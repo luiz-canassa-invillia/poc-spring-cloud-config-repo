@@ -10,7 +10,6 @@ spring:
                 - Method=GET
               filters:
                 - RewritePath=/poc-gateway/users, /api/users
-                - JwtAuthenticationFilter
 
             - id: products-api-get-all-products
               uri: http://localhost:8282
